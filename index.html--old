@@ -643,84 +643,98 @@
             <h2 class="sec_hdng line_bottom">
               Our <span class="blue_text">Latest Works</span>
             </h2>
-            <div class="swiper work_slider">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="img_card">
-                    <div class="img_wrap">
-                      <img src="./assets/images/latestW-11.png" alt="latestW-1">
-                    </div>
-                    <div class="card_cont d-none">
-                      <h3 class="title"><b>The Social Audit - Website Design & Development</b></h3>
-                      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                      <a href="#" class="link_btn"><img src="./assets/images/arrow_img.svg" alt=""></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="img_card">
-                    <div class="img_wrap">
-                      <img src="./assets/images/latestW-2.png" alt="latestW-2">
-                    </div>
-                    <div class="card_cont d-none">
-                      <h3 class="title"><b>The Social Audit </b></h3>
-                      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                      <a href="#" class="link_btn"><img src="./assets/images/arrow_img.svg" alt=""></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="img_card">
-                    <div class="img_wrap">
-                      <img src="./assets/images/latestW-3.png" alt="latestW-3">
-                    </div>
-                    <div class="card_cont d-none">
-                      <h3 class="title"><b>The Social  </b></h3>
-                      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                      <a href="#" class="link_btn"><img src="./assets/images/arrow_img.svg" alt=""></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="img_card">
-                    <div class="img_wrap">
-                      <img src="./assets/images/latestW-11.png" alt="latestW-1">
-                    </div>
-                    <div class="card_cont d-none">
-                      <h3 class="title"><b>The Social Audit  </b></h3>
-                      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                      <a href="#" class="link_btn"><img src="./assets/images/arrow_img.svg" alt=""></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="img_card">
-                    <div class="img_wrap">
-                      <img src="./assets/images/latestW-11.png" alt="latestW-1">
-                    </div>
-                    <div class="card_cont d-none">
-                      <h3 class="title"><b>The Social Audit - Website Design & Development</b></h3>
-                      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                      <a href="#" class="link_btn"><img src="./assets/images/arrow_img.svg" alt=""></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- slider content -->
-               <div class="card_cont_outside">
-                  <h3 class="title"><b>The Social Audit - Website Design & Development</b></h3>
-                  <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                  <a href="#" class="link_btn"><img src="./assets/images/arrow_img.svg" alt=""></a>
-                </div>
-
-                <!-- Navigation buttons -->
-              <div class="custom_nav">
-                <button class="custom_prev"><img src="./assets/images/blue-arrow-icon.svg" alt="blue-arrow-btn"></button>
-                <button class="custom_next"><img src="./assets/images/blue-arrow-icon.svg" alt="blue-arrow-btn"></button>
+            <div class="head_wrapper">
+              <p>
+                We deliver complete digital solutions including content writing,
+                digital marketing, web design, web development, web
+                applications, and mobile applications.
+              </p>
+              <div class="tab_btn_wrapper">
+                <ul>
+                  <li class="active" data-filter="*">All</li>
+                  <li data-filter="web">Web</li>
+                  <li data-filter="app">App</li>
+                  <li data-filter="graphics">Graphics</li>
+                </ul>
               </div>
             </div>
+          </div>
+          <div class="tab_content_wrapper">
+            <div class="tab_content">
+              <div class="grid-item" data-category="web">
+                <div class="inner_wrapper">
+                  <img src="./assets/images/work-1.webp" alt="work-1" />
+                  <div class="inner_cont">
+                    <h3 class="title">Mobile App Design</h3>
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                    <div class="link_wrapper">
+                      <a href="#">Show All</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item" data-category="app">
+                <div class="inner_wrapper">
+                  <img src="./assets/images/work-2.webp" alt="work-2" />
+                </div>
+              </div>
+              <div class="grid-item" data-category="web">
+                <div class="inner_wrapper">
+                  <img src="./assets/images/work-3.webp" alt="work-3" />
+                </div>
+              </div>
+              <div class="grid-item" data-category="graphics">
+                <div class="inner_wrapper">
+                  <img src="./assets/images/work-4.webp" alt="work-4" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+      <script>
+        // for grids
+        function resizeGridItems() {
+          const $grid = $(".our_works .tab_content");
+          // $grid.addClass("active");
+          if (!$grid.length) return;
+
+          const rowHeight = parseInt($grid.css("grid-auto-rows"));
+          const rowGap = parseInt($grid.css("row-gap"));
+
+          if ($(window).width() <= 767) {
+            $grid.find(".grid-item").css("grid-row-end", "auto");
+            return;
+          }
+
+          $grid.find(".grid-item").each(function () {
+            const $item = $(this);
+            const $content = $item.find(".inner_wrapper");
+            if (!$content.length) return;
+
+            const contentHeight = $content.outerHeight();
+            const rowSpan = Math.ceil(
+              (contentHeight + rowGap) / (rowHeight + rowGap)
+            );
+
+            $item.css("grid-row-end", "span " + rowSpan);
+          });
+        }
+
+        $(window).on("load", function () {
+          resizeGridItems();
+
+          if ("ResizeObserver" in window) {
+            const observer = new ResizeObserver(function () {
+              resizeGridItems();
+            });
+
+            $(".our_works .grid-item .inner_wrapper").each(function () {
+              observer.observe(this);
+            });
+          }
+        });
+      </script>
 
       <section class="testimonials">
         <img

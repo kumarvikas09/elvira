@@ -1,45 +1,4 @@
 jQuery(document).ready(function ($) {
-  // for grids
-  function resizeGridItems() {
-    const $grid = $(".our_works .tab_content");
-    // $grid.addClass("active");
-    if (!$grid.length) return;
-
-    const rowHeight = parseInt($grid.css("grid-auto-rows"));
-    const rowGap = parseInt($grid.css("row-gap"));
-
-    if ($(window).width() <= 767) {
-      $grid.find(".grid-item").css("grid-row-end", "auto");
-      return;
-    }
-
-    $grid.find(".grid-item").each(function () {
-      const $item = $(this);
-      const $content = $item.find(".inner_wrapper");
-      if (!$content.length) return;
-
-      const contentHeight = $content.outerHeight();
-      const rowSpan = Math.ceil(
-        (contentHeight + rowGap) / (rowHeight + rowGap)
-      );
-
-      $item.css("grid-row-end", "span " + rowSpan);
-    });
-  }
-
-  $(window).on("load", function () {
-    resizeGridItems();
-
-    if ("ResizeObserver" in window) {
-      const observer = new ResizeObserver(function () {
-        resizeGridItems();
-      });
-
-      $(".our_works .grid-item .inner_wrapper").each(function () {
-        observer.observe(this);
-      });
-    }
-  });
 
   $(".back_top_top").click(function () {
     $("html, body").animate({ scrollTop: 0 }, 200);
@@ -176,6 +135,63 @@ jQuery(document).ready(function ($) {
     },
   });
 
+  var workSlider = new Swiper(".work_slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    grabCursor: true,
+    navigation: {
+    nextEl: ".custom_next",
+    prevEl: ".custom_prev",
+  },
+    breakpoints: {
+      // Mobile
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 16,
+      },
+
+      // Tablets
+      575: {
+        slidesPerView: 1,
+      },
+
+      // Desktop
+      991: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+  const contentBox = document.querySelector(".card_cont_outside");
+  const slides = document.querySelectorAll(
+    ".work_slider  .swiper-slide:not(.swiper-slide-duplicate)"
+  );
+
+  let fadeTimer;
+
+function updateContent(index) {
+  clearTimeout(fadeTimer);
+
+  contentBox.classList.add("is-fading");
+
+  fadeTimer = setTimeout(() => {
+    const hiddenContent =
+      slides[index].querySelector(".card_cont");
+
+    contentBox.innerHTML = hiddenContent.innerHTML;
+
+    contentBox.classList.remove("is-fading");
+  }, 300); 
+}
+
+  updateContent(workSlider.realIndex);
+
+  workSlider.on("slideChange", () => {
+    updateContent(workSlider.realIndex);
+  });
+
+
   // Initialize brands slider
   const slideCount = document.querySelectorAll(
   '.brands_swiper .swiper-slide'
@@ -196,11 +212,14 @@ const brandsSwiperInit = new Swiper('.brands_swiper', {
   },
 
   breakpoints: {
+    0: {
+      slidesPerView: 3
+    },
     765: {
-      slidesPerView: 1
+      slidesPerView: 4
     },
     1000: {
-      slidesPerView: 3
+      slidesPerView: 5
     },
     1200: {
       slidesPerView: maxSlides
