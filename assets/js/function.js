@@ -176,6 +176,39 @@ jQuery(document).ready(function ($) {
     },
   });
 
+  // Initialize brands slider
+  const slideCount = document.querySelectorAll(
+  '.brands_swiper .swiper-slide'
+).length-1;
+
+const maxSlides = Math.min(slideCount, 6);
+console.log(maxSlides);
+
+
+const brandsSwiperInit = new Swiper('.brands_swiper', {
+  spaceBetween: 30,
+  speed: 3000,
+  loop: true,
+  slidesPerView: maxSlides,
+  freeMode: true,
+  autoplay: {
+    delay: 0
+  },
+
+  breakpoints: {
+    765: {
+      slidesPerView: 1
+    },
+    1000: {
+      slidesPerView: 3
+    },
+    1200: {
+      slidesPerView: maxSlides
+    }
+  },
+});
+
+
   // particle js start
   if (window.matchMedia("(min-width: 768px)").matches) {
     tsParticles.load("tsparticles", {
@@ -475,4 +508,5 @@ jQuery(document).ready(function ($) {
     easing: "ease-in-out-back",
     // disable: 'mobile'
   });
+
 });
